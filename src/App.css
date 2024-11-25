@@ -1,0 +1,132 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.game-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.score-board {
+  margin-bottom: 20px;
+}
+
+.game-over {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* In your CSS file */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background-color: #f8f9fa;
+}
+
+/* Add color to the icons */
+.card svg {
+  color: #333;
+  width: 50px;
+  height: 50px;
+}
+
+/* Optional: Add a subtle background color to the game container */
+.game-container {
+  background-color: #f0f2f5;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Style the score display */
+.score-board {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.score-board h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.scores h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Optional: Add different colors for current and best scores */
+.scores h2:first-child {
+  color: #2980b9;  /* Blue for current score */
+}
+
+.scores h2:last-child {
+  color: #27ae60;  /* Green for best score */
+}
+
+.difficulty-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.mode-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.mode-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.mode-indicator {
+  margin: 0;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.active {
+  background-color: #2ecc71;
+}
