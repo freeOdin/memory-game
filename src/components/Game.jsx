@@ -1,14 +1,12 @@
-// src/components/Game.jsx
 import { useState } from 'react';
-import Card from './Card';
 import { FaGithub, FaReact, FaPython, FaNode, FaDatabase, FaCode } from 'react-icons/fa';
 import { DiJavascript, DiCss3, DiHtml5 } from 'react-icons/di';
 import { SiVite, SiRedux, SiTypescript } from 'react-icons/si';
+import Card from './Card';
 
 const Game = () => {
   const [isHardMode, setIsHardMode] = useState(false);
   
-  // Move cardIcons into a function that uses the current mode
   const getCardIcons = (hardMode) => [
     { id: 1, icon: <FaGithub size={50} color={hardMode ? "#000000" : "#333333"} /> },
     { id: 2, icon: <FaReact size={50} color={hardMode ? "#000000" : "#61DAFB"} /> },
@@ -24,7 +22,6 @@ const Game = () => {
     { id: 12, icon: <SiTypescript size={50} color={hardMode ? "#000000" : "#3178C6"} /> }
   ];
 
-  // Initialize cards with the initial mode (false for easy mode)
   const [cards, setCards] = useState(getCardIcons(false));
   const [clickedCards, setClickedCards] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
@@ -33,7 +30,6 @@ const Game = () => {
   const toggleDifficulty = () => {
     const newMode = !isHardMode;
     setIsHardMode(newMode);
-    // Update the cards with new colors based on the mode
     setCards(getCardIcons(newMode));
     setCurrentScore(0);
     setClickedCards([]);
@@ -50,7 +46,6 @@ const Game = () => {
         setBestScore(newScore);
       }
       setClickedCards([...clickedCards, id]);
-      // When shuffling, use the current mode to maintain correct colors
       const shuffled = [...getCardIcons(isHardMode)].sort(() => Math.random() - 0.5);
       setCards(shuffled);
     }

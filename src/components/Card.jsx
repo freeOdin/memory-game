@@ -1,4 +1,3 @@
-// src/components/Card.jsx
 import PropTypes from 'prop-types';
 
 const Card = ({ icon, onClick }) => {

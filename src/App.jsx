@@ -1,4 +1,3 @@
-// src/App.jsx
 import Game from './components/Game';
 import './App.css';
 
